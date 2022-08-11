@@ -5,16 +5,20 @@ namespace TestMyAreas
 {
     public class Tests
     {
+        Areas areas;
+
         [SetUp]
         public void Setup()
         {
             // like constructor of the test
+            Areas areas = new Areas();
         }
 
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
+        [TearDown]
+        public void Close() {
+            // like destructor
+            // nullifying the data
+            areas = null;
         }
 
         [Test]
@@ -23,7 +27,7 @@ namespace TestMyAreas
             // [Test] is important
             // return type is pulic generally
             // 1 - Arrange
-            Areas areas = new Areas();
+            
             float expectedResult = 75;
             float actualResult = 0;
 
@@ -37,7 +41,6 @@ namespace TestMyAreas
         [Test]
         public void TriangleTest() {
             // 1 - Arrange
-            Areas areas = new Areas();
             float expectedResult = 10;
             float actualResult = 0;
             // 2 - Act 
