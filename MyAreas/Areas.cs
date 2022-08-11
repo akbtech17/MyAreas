@@ -18,5 +18,13 @@ namespace MyAreas
             int area = length * width;
             return area;
         }
+        public string Login(string user, string pwd) {
+            if (string.IsNullOrEmpty(user) || string.IsNullOrEmpty(pwd))
+            {
+                return "user or pwd is null";
+            }
+            else if (user == "Admin" && pwd == "admin") return "Welcome Admin!";
+            return "Invalid user and password";
+        }
     }
 }
