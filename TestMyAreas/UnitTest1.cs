@@ -62,7 +62,15 @@ namespace TestMyAreas
         [Test]
         public void Login_Null_Message() {
             string expectedResult = "user or pwd is null";
-            string acutalResult = areas.Login("Admin","admin");
+            string acutalResult = areas.Login("Admin","");
+            Assert.AreEqual(expectedResult, acutalResult, "Messages are not passing");
+        }
+
+        [Test]
+        public void Login_Admin_Success_Message()
+        {
+            string expectedResult = "Welcome Admin!";
+            string acutalResult = areas.Login("Admin", "admin");
             Assert.AreEqual(expectedResult, acutalResult, "Messages are not passing");
         }
     }
