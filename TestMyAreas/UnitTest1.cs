@@ -11,7 +11,7 @@ namespace TestMyAreas
         public void Setup()
         {
             // like constructor of the test
-            Areas areas = new Areas();
+            areas = new Areas();
         }
 
         [TearDown]
@@ -19,6 +19,12 @@ namespace TestMyAreas
             // like destructor
             // nullifying the data
             areas = null;
+        }
+
+        [Test]
+        public void Test1()
+        {
+            Assert.Pass();
         }
 
         [Test]
