@@ -8,9 +8,14 @@ namespace MyAreas
             float area = (float)Math.PI * radius * radius;            
             return area;
         }
-        public float Circle(int b, int height)
+        public float Triangle(int b, int height)
         {
             float area = (float)0.5 * b * height;
+            return area;
+        }
+        public int Rectangle(int length, int width)
+        {
+            int area = length * width;
             return area;
         }
     }
