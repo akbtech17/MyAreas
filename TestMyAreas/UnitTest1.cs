@@ -22,12 +22,6 @@ namespace TestMyAreas
         }
 
         [Test]
-        public void Test1()
-        {
-            Assert.Pass();
-        }
-
-        [Test]
         public void CicleTest()
         {
             // [Test] is important
