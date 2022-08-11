@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace MyAreas
 {
@@ -25,6 +26,19 @@ namespace MyAreas
             }
             else if (user == "Admin" && pwd == "admin") return "Welcome Admin!";
             return "Invalid user and password";
+        }
+        public List<string> GetNames() { 
+            List<string> names = new List<string>();
+
+            names.Add("Anshul");
+            names.Add("Jitin");
+            names.Add("Aatmic");
+            names.Add("Anish");
+            names.Add("Prakhar");
+            names.Add("Pandit");
+            names.Add("Bihari");
+
+            return names;
         }
     }
 }
