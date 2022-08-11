@@ -49,5 +49,14 @@ namespace TestMyAreas
             Assert.AreEqual(expectedResult, actualResult, "Areas not matching");
 
         }
+
+        [TestCase(30, 20, ExpectedResult = 600)]
+        [TestCase(40, 10, ExpectedResult = 300)]
+        [TestCase(25, 25, ExpectedResult = 630)]
+        [TestCase(90, 90, ExpectedResult = 8100)]
+        public int RectangleTest(int l, int b) {
+            int actualResult = areas.Rectangle(l, b);
+            return actualResult;
+        }
     }
 }
