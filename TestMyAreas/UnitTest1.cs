@@ -73,5 +73,12 @@ namespace TestMyAreas
             string acutalResult = areas.Login("Admin", "admin");
             Assert.AreEqual(expectedResult, acutalResult, "Messages are not passing");
         }
+
+        [Test]
+        public void Login_Invalid_Message()
+        {
+            string acutalResult = areas.Login("Admin", "a");
+            StringAssert.Contains("Invalid", acutalResult, "Messages are not passing");
+        }
     }
 }
