@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using MyAreas;
+using System.Collections.Generic;
 
 namespace TestMyAreas
 {
@@ -79,6 +80,12 @@ namespace TestMyAreas
         {
             string acutalResult = areas.Login("Admin", "a");
             StringAssert.Contains("Invalid", acutalResult, "Messages are not passing");
+        }
+
+        [Test]
+        public void Names_Contains_Null() {
+            List<string> names = areas.GetNames();
+            CollectionAssert.AllItemsAreNotNull(names, "Null values are present");
         }
     }
 }
